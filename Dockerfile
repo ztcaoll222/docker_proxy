@@ -2,8 +2,8 @@ FROM alpine:3.15.5
 ARG authorized_keys
 EXPOSE 22
 
-RUN echo "http://mirrors.aliyun.com/alpine/latest-stable/main/" > /etc/apk/repositories
-RUN echo "http://mirrors.aliyun.com/alpine/latest-stable/community/" >> /etc/apk/repositories
+RUN echo "https://mirrors.cloud.tencent.com/alpine/latest-stable/main/" > /etc/apk/repositories
+RUN echo "https://mirrors.cloud.tencent.com/alpine/latest-stable/community/" >> /etc/apk/repositories
 RUN apk add --no-cache bash openssh
 
 COPY entry.sh /entry.sh
